@@ -2,7 +2,7 @@ import { useNavigation, NavigationProp } from '@react-navigation/native';
 import React from 'react';
 import { Platform } from 'react-native';
 import { Button } from '../../components/Button';
-import { Item } from '../../components/Item';
+import { Item, ItemData } from '../../components/Item';
 import { Search } from '../../components/Search';
 import { useSelect } from '../../hooks/select';
 import { Container, Text, List, Wrapper, TextBold, Content, Info } from './styles';
@@ -70,7 +70,7 @@ export function Home() {
   const { setItem } = useSelect()
   const navigation: NavigationProp<any, any> = useNavigation()
 
-  function handleRedirectToDetails(item) {
+  function handleRedirectToDetails(item: ItemData) {
     setItem(item)
     navigation.navigate("Details")
   }

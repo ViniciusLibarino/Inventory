@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacityProps } from 'react-native';
 import { Container, Content, Image, Info, Text, Value, Wrapper } from './styles';
 
-interface Data {
+export interface ItemData {
   id: number
   title: string
   image: string
@@ -11,7 +11,7 @@ interface Data {
 }
 
 interface Props extends TouchableOpacityProps {
-  data: Data
+  data: ItemData
 }
 
 export function Item({ data, ...rest }: Props) {

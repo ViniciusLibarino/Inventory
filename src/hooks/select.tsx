@@ -15,7 +15,7 @@ interface Item {
 
 interface ISelectContextData {
   item: Item
-  setItem: (prevState: Item) => Item
+  setItem: React.Dispatch<SetStateAction<Item>>
 }
 
 const SelectContext = createContext({} as ISelectContextData)
