@@ -1,19 +1,19 @@
-import styled from 'styled-components/native';
-import { RFValue } from 'react-native-responsive-fontsize';
-import { TouchableOpacity } from 'react-native';
+import styled from "styled-components/native";
+import { RFValue } from "react-native-responsive-fontsize";
+import { TouchableOpacity } from "react-native";
 
 export const Container = styled(TouchableOpacity)`
-  padding: ${RFValue(12)}px ${RFValue(8)}px;
+  align-items: center;
   background-color: #1c1c1c;
-  margin-bottom: ${RFValue(12)}px;
   border-radius: ${RFValue(8)}px;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
+  margin-bottom: ${RFValue(12)}px;
+  padding: ${RFValue(12)}px ${RFValue(8)}px;
 `;
 
 export const Image = styled.Image.attrs({
-  resizeMode: 'stretch',
+  resizeMode: "stretch",
 })`
   width: ${RFValue(40)}px;
   height: ${RFValue(40)}px;
@@ -22,9 +22,9 @@ export const Image = styled.Image.attrs({
 `;
 
 export const Wrapper = styled.View`
-  justify-content: center;
   align-items: flex-start;
   flex: 1;
+  justify-content: center;
 `;
 
 export const Text = styled.Text`
@@ -39,12 +39,12 @@ export const Info = styled.Text`
 `;
 
 export const Content = styled.View`
-  width: ${RFValue(28)}px;
-  height: ${RFValue(28)}px;
-  border-radius: ${RFValue(8)}px;
-  background-color: #3a3a3a;
   align-items: center;
+  background-color: #3a3a3a;
+  border-radius: ${RFValue(8)}px;
+  height: ${RFValue(28)}px;
   justify-content: center;
+  width: ${RFValue(28)}px;
 `;
 
 export const Value = styled.Text`

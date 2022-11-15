@@ -1,5 +1,5 @@
-import React, { createContext, ReactNode, SetStateAction, useContext, useState } from "react";
-import { Item } from "../components/Item";
+import React, { createContext, ReactNode, SetStateAction, useContext, useState } from 'react';
+import { Item } from '../components/Item';
 
 interface SelectProviderProps {
   children: ReactNode;
@@ -18,23 +18,23 @@ interface ISelectContextData {
   setItem: React.Dispatch<SetStateAction<Item>>
 }
 
-const SelectContext = createContext({} as ISelectContextData)
+const SelectContext = createContext({} as ISelectContextData);
 
 function SelectProvider({ children }: SelectProviderProps) {
-  const [item, setItem] = useState({} as Item)
+  const [item, setItem] = useState({} as Item);
 
   return (
     <SelectContext.Provider value={{ item, setItem }}>
       {children}
     </SelectContext.Provider>
 
-  )
+  );
 }
 
 function useSelect() {
-  const context = useContext(SelectContext)
+  const context = useContext(SelectContext);
 
   return context;
 }
 
-export { SelectProvider, useSelect }
+export { SelectProvider, useSelect };

@@ -1,6 +1,6 @@
-import React from 'react';
-import { TouchableOpacityProps } from 'react-native';
-import { Container, Content, Image, Info, Text, Value, Wrapper } from './styles';
+import React from "react";
+import { TouchableOpacityProps } from "react-native";
+import { Container, Content, Image, Info, Text, Value, Wrapper } from "./styles";
 
 export interface ItemData {
   id: number
@@ -22,7 +22,7 @@ export function Item({ data, ...rest }: Props) {
 
       <Wrapper>
         <Text>{data.title}</Text>
-        <Info>Valor em estoque: {(data.amount * data.price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</Info>
+        <Info>Valor em estoque: {(data.amount * data.price).toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</Info>
       </Wrapper>
 
       <Content>

@@ -3,8 +3,8 @@ import { useSelect } from '../../hooks/select';
 import { Container, Text, Wrapper } from './styles';
 
 export function Details() {
-  const { item } = useSelect()
-  console.log(item.amount)
+  const { item } = useSelect();
+  console.log(item.amount);
 
   return (
     <Container>
